@@ -12,7 +12,6 @@
     <style>
         /* Cores e Estilos Globais */
         :root {
-            /* Tons cinzas baseados na marca com transparência integrada (RGBA) */
             --bg-barra-transparente: rgba(125, 130, 133, 0.85);
             --bg-card-transparente: rgba(244, 245, 246, 0.88);
             --bg-hero-transparente: rgba(125, 130, 133, 0.90);
@@ -64,9 +63,9 @@
         .logo-container {
             position: absolute;
             left: 30px;
-            top: -35px; /* Faz o logotipo flutuar harmonicamente sobre a barra */
-            width: 150px;
-            height: 150px;
+            top: -35px;
+            width: 160px;
+            height: 160px;
             z-index: 10;
             display: flex;
             align-items: center;
@@ -74,10 +73,10 @@
         }
 
         .logo-container img {
-            width: 90%;
-            height: 90%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
-            border-radius: 50%; /* Garante que o desenho circular assente perfeitamente */
+            border-radius: 50%;
         }
 
         nav {
@@ -159,8 +158,8 @@
         }
 
         .hero-seal-container {
-            width: 290px;
-            height: 290px;
+            width: 190px;
+            height: 190px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -387,7 +386,7 @@
         }
 
         .estrelas {
-            color: #d4af37; /* Dourado Premium */
+            color: #d4af37;
             font-size: 18px;
             margin-bottom: 10px;
         }
@@ -408,62 +407,90 @@
             letter-spacing: 0.5px;
         }
 
-        /* Responsividade Avançada para Celulares */
-        @media (max-width: 900px) {
-            .depoimentos-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
+        /* ----------------------------------------- */
+        /* RESPONSIVIDADE CORRIGIDA PARA CELULARES  */
+        /* ----------------------------------------- */
         @media (max-width: 768px) {
             header {
-                margin: 10px auto;
+                margin: 15px auto;
                 padding: 0 10px;
             }
+
             .header-bar {
                 flex-direction: column;
                 height: auto;
-                padding: 115px 20px 25px 20px;
+                padding: 20px;
                 justify-content: center;
+                gap: 15px;
             }
+
             .logo-container {
-                left: 50%;
-                transform: translateX(-50%);
-                top: 15px;
-                width: 120px;
-                height: 120px;
+                position: static; /* Remove a flutuação fixa no celular */
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
             }
+
+            .logo-container img {
+                width: 100%;
+                height: 100%;
+            }
+
             nav {
-                gap: 20px;
+                gap: 15px;
                 justify-content: center;
                 width: 100%;
+                flex-wrap: wrap;
             }
+
             nav a {
-                font-size: 17px;
+                font-size: 15px;
             }
+
+            /* Ajustes do Bloco Principal (Hero) no Celular */
             .hero {
                 flex-direction: column;
                 text-align: center;
                 gap: 30px;
                 padding: 35px 20px;
             }
+
             .hero-content {
                 max-width: 100%;
             }
-            .hero-seal-container {
-                width: 150px;
-                height: 150px;
+
+            .hero-content h1 {
+                font-size: 24px !important; /* Diminui o título para não quebrar feio */
+                line-height: 1.3;
+                padding: 0 5px;
             }
+
+            .hero-seal-container {
+                width: 140px;
+                height: 140px;
+                margin: 0 auto;
+            }
+
+            /* Ajustes do Miolo e Grid */
             .content-grid {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
+
             .services-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
+
             .sobre-content {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+            }
+
+            .depoimentos-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
         }
     </style>
@@ -472,11 +499,11 @@
 
     <header>
         <div class="header-bar">
-            <!-- Logotipo Flutuante Circular Perfeito -->
+            <!-- Logotipo Adaptável -->
             <div class="logo-container">
                 <img src="photo4.jpg" alt="Gabrielle Rocha Assessoria">
             </div>
-            <!-- Menu interno à barra -->
+            <!-- Menu -->
             <nav>
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre</a>
@@ -529,7 +556,7 @@
                     <div class="service-card">
                         <div class="service-icon">📄</div>
                         <h3>Administração</h3>
-                        <p>Análise de Documentos e Processos Administrativos.</p>
+                        <p>Análise de Documentos e Processos Administrativos céleres.</p>
                     </div>
 
                 </div>
@@ -547,7 +574,7 @@
                             </div>
                             <div class="sobre-text">
                                 <h3>Gabrielle Rocha</h3>
-                                <p>Bacharel em Direito e fundadora da GR Serviços Extrajudiciais & Registro de Marcas. Unindo atendimento humanizado e alta performance, transformo a burocracia em soluções extrajudiciais seguras para proteger o seu patrimônio e o seu negócio.</p>
+                                <p>Bacharel em Direito e fundadora da assessoria. Unindo atendimento humanizado e alta performance, transformo a burocracia em soluções extrajudiciais seguras para proteger o seu patrimônio e o seu negócio.</p>
                             </div>
                         </div>
                     </div>
