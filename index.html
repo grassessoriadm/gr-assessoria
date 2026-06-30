@@ -212,6 +212,40 @@
             transform: translateY(-3px);
         }
 
+        .service-card-link {
+            cursor: pointer;
+            position: relative;
+            border: 2px solid transparent;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card-link:hover {
+            transform: translateY(-5px);
+            border-color: var(--vinho);
+            box-shadow: 0 8px 25px rgba(138, 60, 67, 0.15);
+        }
+
+        .service-card-link:active {
+            transform: translateY(-2px);
+        }
+
+        .card-link-hint {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--vinho);
+            letter-spacing: 0.3px;
+            opacity: 0;
+            transform: translateY(5px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .service-card-link:hover .card-link-hint {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .service-icon {
             font-size: 34px;
             margin-bottom: 15px;
@@ -395,7 +429,7 @@
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             border: 1px solid rgba(255, 255, 255, 0.6);
-            text-align: left; /* Mantém o texto dos depoimentos alinhado à esquerda para leitura confortável */
+            text-align: left;
         }
 
         .estrelas {
@@ -456,6 +490,7 @@
             footer { margin: 30px 10px 0 10px; font-size: 13px; padding: 20px 15px; }
         }
     </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
 
@@ -508,6 +543,18 @@
                         <div class="service-icon">📄</div>
                         <h3>Administração</h3>
                         <p>Análise de Documentos e Processos Administrativos.</p>
+                    </div>
+                    <div class="service-card service-card-link" onclick="window.open('https://drive.google.com/file/d/1736b2_OH32j_56tQpJIlJ-QaNw6895f5/view?usp=sharing', '_blank')">
+                        <div class="service-icon">🎯</div>
+                        <h3>Monitoria – Abertura e Direcionamento Profissional</h3>
+                        <p>Conheça como funciona a monitoria e feche seu acompanhamento na última página do documento.</p>
+                        <span class="card-link-hint">📄 Acessar documento →</span>
+                    </div>
+                    <div class="service-card service-card-link" onclick="window.open('https://drive.google.com/file/d/1CZ7HpoiZN9-5wqhVES1N0BDsfm3rHN7x/view?usp=sharing', '_blank')">
+                        <div class="service-icon">🏪</div>
+                        <h3>MEI Estruturado – Abertura e Direcionamento Profissional</h3>
+                        <p>Precisa abrir seu CNPJ/MEI? Receba ajuda e direcionamento completo para começar certo.</p>
+                        <span class="card-link-hint">📄 Acessar documento →</span>
                     </div>
                 </div>
             </section>
